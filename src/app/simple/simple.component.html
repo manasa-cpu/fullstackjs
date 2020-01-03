@@ -1,0 +1,79 @@
+<!-- <!-- <p>simple works!</p>
+<div>
+    <h1 class="text-success" *ngIf="users.length > 0">
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let user of users">
+               {{user}}
+            </li>
+        </ul>
+    </h1>
+</div>
+
+
+
+<div>
+    <h1 class="text-danger" *ngIf="users.length == 0"> no users are here</h1>
+</div> -->
+<!-- <div *ngIf="users.length>0;then usersList; else noUsersList"></div>
+<ng-template #usersList>
+    <ul class="list-group">
+        <li class="list-group-item mt-2" *ngFor="let user of users">
+            {{user}}
+        </li>
+    </ul>
+</ng-template>
+<ng-template #noUsersList>
+    <h1 class="text-danger">No users here</h1>
+</ng-template> --> 
+
+<!-- <div [hidden]="users.length==0">users are  here</div>
+<div [hidden]="users.length>0">No users are  here</div>
+
+<ng-template #userList>
+    just users here
+</ng-template> -->
+
+<!-- <span [ngSwitch]="color">
+    <p *ngSwitchCase="'red'">
+        <span class="text-danger">red color here</span>
+    </p>
+    <p *ngSwitchCase="'green'">
+        <span class="text-success">green  color here</span>
+    </p>
+    <p *ngSwitchDefault>
+        <span class="text-dark">no color display</span>
+    </p>
+</span> -->
+
+<!--Attribute directives-->
+
+<button [ngClass]="'btn btn-dark'">btn dark</button><!--string way-->
+<button [ngClass]="['btn','btn-success']">Submit</button><!--array way-->
+<button [ngClass]="{btn:true,'btn-danger':true}">btn Danger class</button><!--object way-->
+
+<!---
+<button [ngClass]="['btn', 'btn-danger' , 'mt-2']"
+(click)="toggleState()">dynamic</button>
+
+<div ngClass="dynamicCss()">
+     Lorem ipsum dolor, sit amet consectetur adipisicing
+     elit. Ea, totam eos atque cum maxime, quis nihil soluta eaque, 
+     libero aut autem nam tempore magnam quisquam dolorem veniam 
+     natus minus incidunt?
+</div>-->
+
+
+
+<div class="container">
+    <ul class="list-group">
+        <li class="list-group-item mt-2" *ngFor="let user of users"
+        [ngStyle]="{'background': user.gender==='female' ? 'purple' : 'pink' }"
+        >
+            {{user.name}}
+            {{user.age}}
+            {{user.gender}}
+            {{user.country}}
+        </li>
+    </ul>
+</div>
+

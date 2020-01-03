@@ -1,0 +1,85 @@
+<div class="container">
+    <div class="col-md-4 offset-4 mt-2 card">
+        <div class="card-body">
+            <h1 class="display-5 text-center text-uppercase">Register</h1>
+            <form #form="ngForm" (ngSubmit)="submit(form)">
+                <div class="form-group">
+                    <label for="firstname">Firstname</label>
+                    <input type="text"
+                           id="firstname"
+                           class="form-control"
+                           name="firstname"
+                           required
+                           ngModel
+                           placeholder="enter firstname"/>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password"
+                           id="password"
+                           class="form-control"
+                           name="password"
+                           required
+                           ngModel
+                           placeholder="enter firstname"/>
+                </div>
+                <div class="form-group">
+                        <label for="lastname">Lastname</label>
+                        <input type="text"
+                               id="lastname"
+                               class="form-control"
+                               name="lastname"
+                               required
+                               ngModel
+                               placeholder="enter lastname"/>
+                    </div>
+                   <!--<div class="form-group">
+                        <label for="gender">Gender</label><br>
+                        <input type="radio"
+                                   name="gender"
+                                   id="gender"
+                                   value="gender"
+                                   required
+                                   ngModule
+                            />male
+                        <input type="radio"
+                            name="gender"
+                            id="gender"
+                            value="gender"
+                            required
+                            ngModule
+                        />female
+                    </div>
+                    <div class="form-group">
+                            <label for="phone">phonenumber</label>
+                            <input type="number"
+                                   id="phone"
+                                   class="form-control"
+                                   name="phone"
+                                   required
+                                   ngModel
+                                   placeholder="phone number"/>
+                        </div>
+                        <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email"
+                                       id="emailid"
+                                       class="form-control"
+                                       name="emailid"
+                                       required
+                                       ngModel
+                                       placeholder="email-id"/>
+                            </div>
+                    <div class="form-group">
+            
+                        <select name="country" class="form-control">
+                            <option *ngFor="let country of countryList; index as i" [ngValue]="i">{{country}}</option>
+                        </select>
+                    </div>-->
+                    <div class="form-group">
+                        <button type="Register">Login</button>
+                    </div>
+            </form>
+        </div>
+    </div>
+</div>

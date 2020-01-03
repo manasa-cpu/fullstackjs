@@ -1,0 +1,34 @@
+
+
+<button class="btn btn-primary" (click)="addNewUser()">add new user</button>
+<table class="table table-bordered table-hover table-dark mt-2">
+    <tr>
+        <th>Name</th>
+        <th>photo</th>
+        <th>Age</th>
+        <th>designation</th>
+        <th>education</th>
+        <th>dateofbirth</th>
+        <th>companyname</th>
+        <th>salary</th>
+        <th>location</th>
+        <th>delete user</th>
+        <th></th>
+    </tr>
+    <tr *ngFor="let user1 of user1" >
+        <td>{{user1.name}}</td>
+        <td><img class="img-fluid rounded-circle"
+            style="width:100px; height:100px;"
+             src="{{user1.photo}}" alt="{{user1.name}}"/></td>
+        <td>{{user1.age}}</td>
+        <td>{{user1.designation}}</td>
+        <td>{{user1.education}}</td>
+        <td>{{user1.dateofbirth}}</td>
+        <td>{{user1.companyname}}</td>
+        <td>{{user1.salary}}</td>
+        <td>{{user1.location}}</td>
+        <td>
+            <button class="btn btn-danger btn-sm" (click)="removeUser(user)">Remove</button>
+        </td>
+    </tr>
+</table>
